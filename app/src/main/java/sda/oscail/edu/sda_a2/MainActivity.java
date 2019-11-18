@@ -44,10 +44,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.i(TAG, "The activity is visible and about to be started.");
         setContentView(R.layout.activity_main);
-
     }
-
-
 
     /***********
      * code adapted from android docs described here:
@@ -101,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
+        Log.i(TAG, "result back from explicit intent activity");
         // Check that  it is OpenExplicitIntent with an ok result
         if(requestCode == EMAIL_ACTIVITY_RESULT_CODE) {
             if(resultCode == RESULT_OK) {
@@ -123,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
         // finds email information from the textview
         TextView textView = (TextView) findViewById(R.id.emailContent);
         String emailContent = textView.getText().toString();
+        Log.i(TAG, "emailContent: " + emailContent);
 
         /**
          * code was adapted from the information here:

@@ -26,6 +26,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.Selection;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
@@ -33,10 +34,14 @@ import android.widget.EditText;
 
 
 public class OpenExplicitIntent extends AppCompatActivity {
-
+    //debug object
+    private static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //debug message
+        Log.i(TAG, "The activity is visible and about to be started.");
         setContentView(R.layout.activity_open_explicit_intent);
 
         /***
@@ -48,6 +53,7 @@ public class OpenExplicitIntent extends AppCompatActivity {
         int emailCursor = email.length();
         Editable emailText = email.getText();
         Selection.setSelection(emailText, emailCursor);
+
 
         EditText subject = (EditText) findViewById(R.id.subject);
         int subjectCursor = subject.length();
@@ -94,6 +100,7 @@ public class OpenExplicitIntent extends AppCompatActivity {
 
         // combines all string values into one string object
         String fullText = emailText + "\n" + subjectText + "\n" + updatedBodyText + "\n";
+        Log.i(TAG, "THE FULL EMAIL CONTENT IS " + fullText);
 
         // add string to intent to pass back to MainActivity
         Intent intent = new Intent();
