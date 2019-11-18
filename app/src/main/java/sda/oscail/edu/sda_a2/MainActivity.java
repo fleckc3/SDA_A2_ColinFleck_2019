@@ -23,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ import android.widget.TextView;
 
 //main activity class opens the user interface of app
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
     /**
      * code adapted from android docs described here:
      * https://developer.android.com/training/camera/photobasics
@@ -40,12 +42,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(TAG, "The activity is visible and about to be started.");
         setContentView(R.layout.activity_main);
 
-        //Receive intent from explicit intent activity
-      /*  Intent intent = getIntent();
-        String emailContent = intent.putExtra(OpenExplicitIntent. "keyName"); */
     }
+
 
 
     /***********
