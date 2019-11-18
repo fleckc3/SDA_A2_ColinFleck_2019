@@ -1,7 +1,12 @@
 <resources>
-    <string name="app_name">sda_a2</string>
+    <string name="app_name">SDA Assign02-2019 Colin Fleck</string>
     <string name="open_camera">Implicit Intent: Open Camera</string>
     <string name="view_picture">Implicit Intent: View Picture</string>
     <string name="call_activity">Explicit Intent: Call an activity</string>
     <string name="send_button">SEND</string>
+    <string name="title_activity_explicit_intent">ExplicitIntent</string>
+    <string name="email_address">"To: "</string>
+    <string name="email_subject">"Subject: "</string>
+    <string name="email_content">"Compose: "</string>
+    <string name="save_email">SAVE</string>
 </resources>
